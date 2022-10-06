@@ -25,15 +25,15 @@ RUN set -ex \
     && rm -rf /var/lib/apt/lists/*
 
 ENV WWW_ROOT /var/www/html
-ENV REPO_URL https://github.com/HideInMatrix/MacCmsPro.git
+ENV REPO_URL https://github.com/magicblack/maccms10.git 
 
 RUN set -ex \
     && cd /tmp \
     && git clone ${REPO_URL} \
-    && mv MacCmsPro/* ${WWW_ROOT} \
-    && rm -rf /tmp/MacCmsPro \
+    && mv maccms10/* ${WWW_ROOT} \
+    && rm -rf /tmp/maccms10 \
     && cd ${WWW_ROOT} \
-    && mv admin.php cmsadmin.php \
+    && cp admin.php cmsadmin.php \
     && chmod a+rw -R application runtime upload static addons \
     && mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
 

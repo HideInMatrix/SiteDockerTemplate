@@ -1,0 +1,25 @@
+<?php
+ $aik =  array (
+  'title' => '免费视频解析-全网无广告解析播放',
+  'youlian' => 'https://jx.sujx.top/jiexi.php/?url=',
+  'jiekou2' => 'https://okjx.cc/?url=',
+  'jiekou3' => 'https://jx.aidouer.net/?url=',
+  'jiekou4' => 'https://jx.ppflv.com/?url=',
+  'jiekou5' => 'http://api.aglua.com/?url=',
+  'jiekou6' => 'https://jx.wzslw.cn/?url=',
+  'jiekou7' => 'https://mg.2g88.vip/?url=',
+  'jiekou8' => 'https://www.8090g.cn/jiexi/?url=',
+  'jiekou9' => 'http://zy.ataoju.com/jx/?url=',
+  'jiekou10' => 'https://z1.m1907.cn/?jx=',
+  'jiekou1' => 'https://jx.sujx.top/jiexi.php/?url=',
+  'admin_name' => 'admin',
+  'admin_pass' => '6703c49774783567455e479f3845c080',
+  'description' => '',
+  'foot' => '',
+  'hometopnotice' => '',
+  'hometopright' => '',
+  'homelink' => '',
+  'sort' => '1,2,3,4,5,6,7,8,9,10',
+  'joinhotkey' => '0',
+);
+?>

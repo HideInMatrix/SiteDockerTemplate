@@ -11,7 +11,7 @@ return array (
       'on' => '启用',
       'off' => '关闭',
     ),
-    'value' => 'on',
+    'value' => 'off',
     'rule' => 'required',
     'msg' => '',
     'tip' => '启用后只有登陆才能看到弹幕',
@@ -50,5 +50,4 @@ return array (
     'ok' => '',
     'extend' => '',
   ),
-
 );

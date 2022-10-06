@@ -1,5 +1,69 @@
 <?php
 return array (
+  'danmuplayer' => 
+  array (
+    'status' => '1',
+    'sort' => '1800',
+    'from' => 'danmuplayer',
+    'show' => '弹幕播放器',
+    'des' => '基于dplayer的弹幕播放器，支持m3u8和mp4',
+    'parse' => '/index.php/danmu/player?url=',
+    'ps' => '1',
+    'tip' => '无需安装任何插件',
+    'id' => 'danmuplayer',
+  ),
+  'hnm3u8' => 
+  array (
+    'status' => '1',
+    'from' => 'hnm3u8',
+    'show' => '红牛在线',
+    'des' => '支持手机电脑在线播放',
+    'target' => '_self',
+    'ps' => '0',
+    'parse' => '',
+    'sort' => '1193',
+    'tip' => '无需安装任何插件',
+    'id' => 'hnm3u8',
+  ),
+  'dbm3u8' => 
+  array (
+    'status' => '1',
+    'from' => 'dbm3u8',
+    'show' => '百度在线',
+    'des' => '支持手机电脑在线播放',
+    'target' => '_self',
+    'ps' => 1,
+    'parse' => 'http://movie.matrices.cf/resolve/?url=',
+    'sort' => '1033',
+    'tip' => '无需安装任何插件',
+    'id' => 'dbm3u8',
+  ),
+  'ddzy' => 
+  array (
+    'status' => '1',
+    'from' => 'ddzy',
+    'show' => '多多播放1',
+    'des' => '支持手机电脑在线播放',
+    'target' => '_self',
+    'ps' => '0',
+    'parse' => '',
+    'sort' => '1000',
+    'tip' => '无需安装任何插件',
+    'id' => 'ddzy',
+  ),
+  'bilibili' => 
+  array (
+    'status' => '1',
+    'from' => 'bilibili',
+    'show' => '哔哩哔哩',
+    'des' => '支持手机电脑在线播放',
+    'target' => '_self',
+    'ps' => 1,
+    'parse' => 'http://movie.matrices.cf/resolve/?url=',
+    'sort' => '995',
+    'tip' => '无需安装任何插件',
+    'id' => 'bilibili',
+  ),
   'dplayer' => 
   array (
     'status' => '1',

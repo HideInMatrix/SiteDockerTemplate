@@ -1,1 +1,1 @@
-mxone主题,/cmsadmin.php/admin/mxone/mxoneset
+mxone主题,/admi.php/admin/mxone/mxoneset
