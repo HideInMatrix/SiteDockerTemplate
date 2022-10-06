@@ -1,0 +1,90 @@
+version: '3.9'
+services:
+  db:
+    # build:
+    #   context: .
+    #   dockerfile: ./docker_mysql/Dockerfile
+    # container_name: mysql
+    image: mariadb:latest
+    container_name: mariadb
+    ports:
+      - 3306:3306
+    volumes:
+      - ./docker_mysql/script:/home/sql
+      - ./docker_mysql/backup/:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=U5jrJWPpkXV2
+    restart: always
+  phpmyadmin:
+    image: phpmyadmin:latest
+    restart: always
+    ports:
+      - 8881:80
+    environment:
+      - PMA_ARBITRARY=1
+      - MYSQL_ROOT_PASSWORD=U5jrJWPpkXV2
+    depends_on:
+      - db
+  #    volumes:
+  #      - phpmyadmin:/var/www/html
+  web:
+    image: nginx:latest
+    ports:
+      - 80:80
+    volumes:
+      - ./docker_nginx/app:/www/
+      - ./docker_nginx/conf:/etc/nginx/conf.d/
+      - ./docker_nginx/certificate:/etc/nginx/certificate
+      - ./docker_nginx/nginx.conf:/etc/nginx/nginx.conf
+    #      - phpmyadmin:/www/phpmyadmin
+    restart: always
+    links:
+      - phpmyadmin:phpserver
+      - blog_back:javaserver
+    depends_on:
+      - phpmyadmin
+  blog_back:
+    image: s390x/java:8-jdk
+    container_name: java-blog
+    working_dir: /home/java/app
+    environment:
+      - MYSQL_URL=jdbc:mysql://db:3306/vueblog?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+      - REDIS_SERVER=redis_server
+    volumes:
+      - ./docker_java/app/blog/application.yml:/home/java/app/blog/application.yml
+      - ./docker_java/app/blog/Blog-1.0.jar:/home/java/app/blog/Blog.jar
+    ports:
+      - 8880:8880
+    command: java -jar /home/java/app/blog/Blog.jar --spring.config.location=/home/java/app/blog/application.yml
+    depends_on:
+      - db
+      - redis_server
+    restart: always
+
+  redis_server:
+    image: redis:latest
+    container_name: redis
+    volumes:
+      - ./docker_redis/conf/redis.conf:/etc/redis/redis.conf
+      - ./docker_redis/data:/data
+      - ./docker_redis/logs:/logs
+    ports:
+      - 6379:6379
+    command: redis-server /etc/redis/redis.conf --appendonly yes
+    restart: always
+  maccms:
+    build:
+      context: ./docker_movie
+    container_name: maccms
+    restart: always
+    ports:
+      - 8882:80
+    links:
+      - db
+    volumes:
+      - ./docker_movie/template/:/var/www/html/template/
+      - ./docker_movie/resolve/:/var/www/html/resolve/
+      - ./docker_movie/addons/:/var/www/html/addons/
+      - ./docker_movie/upload/:/var/www/html/upload/
+volumes:
+  phpmyadmin:

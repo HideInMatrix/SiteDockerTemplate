@@ -1,0 +1,11 @@
+version: '3.9'
+services:
+  web:
+    image: nginx:latest
+    ports:
+      - 80:80
+    volumes:
+      - ./app:/www/
+      - ./conf:/etc/nginx/conf.d/
+      - ./certificate:/etc/nginx/certificate
+    restart: always

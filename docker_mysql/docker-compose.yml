@@ -1,0 +1,22 @@
+version: "3.9"
+services:
+  db:
+    image: mariadb:latest
+    container_name: mysql
+    ports:
+      - 3306:3306
+    volumes:
+      - ./script:/home/sql
+      - ./backup/:/home/sql/backup
+    environment:
+      - MYSQL_ROOT_PASSWORD=U5jrJWPpkXV2
+    restart: always
+  phpmyadmin:
+    image: phpmyadmin:latest
+    restart: always
+    ports:
+      - 8881:80
+    environment:
+      - PMA_ARBITRARY=1
+    environment:
+      - MYSQL_ROOT_PASSWORD=U5jrJWPpkXV2
