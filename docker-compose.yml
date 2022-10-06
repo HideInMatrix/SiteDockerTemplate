@@ -82,8 +82,8 @@ services:
     links:
       - db
     volumes:
+      - ./docker_movie/application:/var/www/html/application/
       - ./docker_movie/template/:/var/www/html/template/
-      - ./docker_movie/resolve/:/var/www/html/resolve/
       - ./docker_movie/addons/:/var/www/html/addons/
       - ./docker_movie/upload/:/var/www/html/upload/
 volumes:
