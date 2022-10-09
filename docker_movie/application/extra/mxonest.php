@@ -4,8 +4,8 @@ return array (
   array (
     's1' => 
     array (
-      'logo1' => 'template/mxone/mxstatic/image/logo.png',
-      'logo2' => 'template/mxone/mxstatic/picture/logo.png',
+      'logo1' => 'upload/mxcms/20221006-1/444ac82d6206bd63c9a5d3ea8a09c130.jpg',
+      'logo2' => 'upload/mxcms/20221006-1/fa91e4abfd4be2b3706ceb7a8c1cea07.png',
       'pic' => 'template/mxone/mxstatic/image/loading.gif',
       'pic1' => 'template/mxone/mxstatic/image/loading.gif',
       'gg' => 'matrices',
@@ -156,7 +156,7 @@ return array (
       'app' => '0',
       'app_url' => '',
       'app_url2' => '',
-      'wz0' => '1',
+      'wz0' => '0',
       'web1' => 'www.banyundog.com',
       'wz01' => '1',
       'web2' => 'www.banyundog.com',
@@ -282,10 +282,10 @@ return array (
     ),
     's4' => 
     array (
-      'shier' => '0',
+      'shier' => '1',
       'ctrl' => '0',
       'right' => '0',
-      'mode' => '0',
+      'mode' => '1',
       'pbtips' => '你知道的太多了',
       'tbdm' => '1',
       'tbdmtips' => '<meta name="referrer" content="always"> 

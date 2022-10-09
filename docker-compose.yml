@@ -27,6 +27,7 @@ services:
     image: nginx:latest
     ports:
       - 80:80
+      - 443:443
     volumes:
       - ./docker_nginx/app:/www/
       - ./docker_nginx/conf:/etc/nginx/conf.d/
@@ -41,7 +42,8 @@ services:
     depends_on:
       - phpmyadmin
   blog_back:
-    image: s390x/java:8-jdk
+    # image: s390x/java:8-jdk
+    image: openjdk:8-jdk-stretch
     container_name: java-blog
     working_dir: /home/java/app
     environment:
@@ -71,20 +73,21 @@ services:
     restart: always
   maccms:
     build:
-     context: ./docker_movie
+      context: ./docker_movie
     container_name: maccms
     restart: always
     ports:
-       - 8080:80
+      - 8882:80
+      - 8883:443
     volumes:
-       - ./docker_movie/static/:/var/www/html/static/
-       - ./docker_movie/application/:/var/www/html/application/
-       - ./docker_movie/template/:/var/www/html/template/
-       - ./docker_movie/resolve/:/var/www/html/resolve/
-       - ./docker_movie/addons/:/var/www/html/addons/
-       - ./docker_movie/upload/:/var/www/html/upload/
+      - ./docker_movie/static/:/var/www/html/static/
+      - ./docker_movie/application/:/var/www/html/application/
+      - ./docker_movie/template/:/var/www/html/template/
+      - ./docker_movie/resolve/:/var/www/html/resolve/
+      - ./docker_movie/addons/:/var/www/html/addons/
+      - ./docker_movie/upload/:/var/www/html/upload/
     links:
-       - db
-       - redis_server
+      - db
+      - redis_server
 volumes:
   phpmyadmin:
