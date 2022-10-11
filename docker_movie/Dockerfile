@@ -33,7 +33,7 @@ RUN set -ex \
     && mv maccms10/* ${WWW_ROOT} \
     && rm -rf /tmp/maccms10 \
     && cd ${WWW_ROOT} \
-    && cp admin.php cmsadmin.php \
+    && mv admin.php cmsadmin.php \
     && chmod a+rw -R application runtime upload static addons \
     && mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
 
