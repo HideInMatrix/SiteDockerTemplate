@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+	  <head>
+		      <meta charset="UTF-8" />
+		          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+			      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+			          <title>Document</title>
+				      <style>
+      * {
+	              margin: 0;
+		              padding: 0;
+			              font-size: 12px;
+				            }
+
+            body {
+		            width: 100vw;
+			            height: 100vh;
+				            display: flex;
+					            align-items: center;
+						            justify-content: center;
+							            background-color: #ff6972;
+								            flex-direction: column;
+									          }
+	          p {
+			          font-size: 2rem;
+				          color: #fff;
+					          font-weight: bold;
+						          letter-spacing: 1rem;
+							          animation: text 2s linear;
+								          line-height: 4rem;
+									        }
+		        @keyframes text {
+				        0% {
+						          opacity: 0;
+							          }
+					        100% {
+							          opacity: 1;
+								          }
+						      }
+			    </style>
+			      </head>
+			        <body>
+					    <canvas id="canvas"></canvas>
+					        <p id="text">最美的♥送给最美的你</p>
+						    <script>
+							          let canvas = document.getElementById('canvas')
+      let text = document.getElementById('text')
+      console.log(text.offsetHeight)
+      let tWidth = text.clientWidth
+      let tHeight = text.clientHeight
+      let cWidth = (canvas.width = window.innerWidth)
+      let cHeight = (canvas.height = window.innerHeight - tHeight)
+      console.log(cWidth, cHeight)
+
+      let ctx = canvas.getContext('2d')
+      let radian_cal = 0
+      let radian_add = Math.PI / 180
+      let x, y
+      ctx.beginPath()
+
+      ctx.shadowBlur = 5
+      ctx.shadowColor = '#eb3b5a'
+      ctx.strokeStyle = '#eb3b5a'
+
+      ctx.translate(cWidth / 2, cHeight / 2)
+
+      ctx.moveTo(calX(radian_cal), calY(radian_cal))
+
+      function draw() {
+	              if (radian_cal <= 2 * Math.PI) {
+			                radian_cal += radian_add
+			                x = calX(radian_cal)
+			                y = calY(radian_cal)
+			                ctx.lineTo(x, y)
+			                ctx.stroke()
+			              } else {
+					                clearInterval(timer)
+					                ctx.fillStyle = '#eb3b5a'
+					                ctx.fill()
+					              }
+	            }
+
+      function calX(t) {
+	              return 8 * 16 * Math.pow(Math.sin(t), 3)
+	            }
+
+      function calY(t) {
+	              return (
+			                -8 *
+			                (13 * Math.cos(t) -
+						            5 * Math.cos(2 * t) -
+						            2 * Math.cos(3 * t) -
+						            Math.cos(4 * t))
+			              )
+	            }
+
+      let timer = setInterval(draw, 10)
+    </script>
+      </body>
+</html>
+

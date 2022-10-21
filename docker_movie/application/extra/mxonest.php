@@ -4,8 +4,8 @@ return array (
   array (
     's1' => 
     array (
-      'logo1' => 'upload/mxcms/20221006-1/444ac82d6206bd63c9a5d3ea8a09c130.jpg',
-      'logo2' => 'upload/mxcms/20221006-1/fa91e4abfd4be2b3706ceb7a8c1cea07.png',
+      'logo1' => 'upload/mxcms/20221015-1/6c45571f2f15c0c957f42a55cc3fef3c.png',
+      'logo2' => 'upload/mxcms/20221015-1/6ff4dec636442a86349aed87bef796d3.jpg',
       'pic' => 'template/mxone/mxstatic/image/loading.gif',
       'pic1' => 'template/mxone/mxstatic/image/loading.gif',
       'gg' => 'matrices',
@@ -71,7 +71,7 @@ return array (
       'listphbname' => '月榜',
       'listphbtj' => '',
       'listphbby' => 'hits_month',
-      'indextopic' => '1',
+      'indextopic' => '0',
       'sytopicicon' => '0',
       'sytopiciconcss' => '#FF0000;',
       'indextopicnum' => '4',
@@ -282,10 +282,10 @@ return array (
     ),
     's4' => 
     array (
-      'shier' => '1',
+      'shier' => '0',
       'ctrl' => '0',
       'right' => '0',
-      'mode' => '1',
+      'mode' => '0',
       'pbtips' => '你知道的太多了',
       'tbdm' => '1',
       'tbdmtips' => '<meta name="referrer" content="always"> 

@@ -42,8 +42,8 @@ services:
     depends_on:
       - phpmyadmin
   blog_back:
-    # image: s390x/java:8-jdk
-    image: openjdk:8-jdk-stretch
+    image: s390x/java:8-jdk
+    # image: openjdk:8-jdk-stretch
     container_name: java-blog
     working_dir: /home/java/app
     environment:
