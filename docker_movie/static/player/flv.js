@@ -1,2 +1,1 @@
-MacPlayer.Html = '<embed type="application/x-shockwave-flash" src="'+maccms.path+'player/play.swf" id="Player" bgcolor="#FFFFFF" quality="high" allowfullscreen="true" allowNetworking="internal" allowscriptaccess="never" wmode="transparent" menu="false" always="false"  pluginspage="http://www.macromedia.com/go/getflashplayer" width="100%" height="100%" flashvars="&xml=<vcastr><channel><item><source>' + MacPlayer.PlayUrl +'</source></item></channel></vcastr>">';
-MacPlayer.Show();
+MacPlayer.Html='<iframe width="100%" height="'+MacPlayer.Height+'" src="https://movie.matrices.cf/resolve/jx/v.php?url='+MacPlayer.PlayUrl+'" frameborder="0" allowfullscreen="true" border="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>';MacPlayer.Show();

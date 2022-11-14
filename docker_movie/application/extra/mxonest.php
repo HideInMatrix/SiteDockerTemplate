@@ -20,7 +20,7 @@ return array (
       'pcgddh' => '1',
       'gddhbg' => '0',
       'gddhbgdm' => '',
-      'zhiboym' => '1',
+      'zhiboym' => '0',
       'diyliveicon' => 'iconfont icon-zhibo',
       'sydh' => '0',
       'sydhicon' => 'icon-all',
@@ -80,7 +80,7 @@ return array (
       'syzixuniconcss' => '#FF0000',
       'indexartid' => '5',
       'indexartnum' => '6',
-      'slide' => '1',
+      'slide' => '0',
       'slidetj' => '5',
       'slidenum' => '8',
       'slidediy1' => '0',
@@ -103,8 +103,8 @@ return array (
       'slidediy5name' => '',
       'slidediy5pic' => '',
       'slidediy5url' => '',
-      'hot' => '1',
-      'hoticon' => '0',
+      'hot' => '0',
+      'hoticon' => '1',
       'hoticoncss' => '#FF0000',
       'hotlevel' => '1',
       'hotall' => 'all',
@@ -251,14 +251,14 @@ return array (
     ),
     's3' => 
     array (
-      'adqj' => '0',
-      'aadqj' => '<div class="module-blocklist module-player-list" style="padding: 35px;border-radius: 10px;margin-bottom: 20px;"> <h3 style="text-align: center;">广告位05</h3></div>',
+      'adqj' => '1',
+      'aadqj' => '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5901616898778649" crossorigin="anonymous"></script>',
       'ad1' => '0',
       'aad1' => '<div class="module-blocklist module-player-list" style="padding: 35px;border-radius: 10px;margin-bottom: 20px;"> <h3 style="text-align: center;">广告位01</h3></div>',
       'addb' => '0',
       'aaddb' => '<div class="module-blocklist module-player-list" style="padding: 35px;border-radius: 10px;margin-bottom: 20px;"> <h3 style="text-align: center;">广告位06</h3></div>',
       'ad2' => '0',
-      'aad2' => '<div class="module-blocklist module-player-list" style="padding: 35px;border-radius: 10px;margin-bottom: 20px;"> <h3 style="text-align: center;">广告位02</h3></div>',
+      'aad2' => '',
       'ad3' => '0',
       'aad3' => '<div class="module-blocklist module-player-list" style="padding: 35px;border-radius: 10px;margin-top: 20px;"> <h3 style="text-align: center;">广告位03</h3></div>',
       'ad4' => '0',
@@ -289,7 +289,16 @@ return array (
       'pbtips' => '你知道的太多了',
       'tbdm' => '1',
       'tbdmtips' => '<meta name="referrer" content="always"> 
-<meta name="referrer" content="no-referrer" />',
+<meta name="referrer" content="no-referrer" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q5WFWVLN3E"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(\'js\', new Date());
+
+  gtag(\'config\', \'G-Q5WFWVLN3E\');
+</script>',
       'dbdm' => '1',
       'dbdmtips' => '统计代码',
       'stylediy' => '0',

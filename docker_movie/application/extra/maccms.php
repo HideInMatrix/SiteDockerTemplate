@@ -33,7 +33,7 @@ return array (
     'mob_status' => '0',
     'mob_template_dir' => 'mxone',
     'mob_html_dir' => 'html_tplmx',
-    'site_tj' => '统计代码',
+    'site_tj' => '',
     'site_status' => '1',
     'site_close_tip' => '站点暂时关闭，请稍后访问',
     'ads_dir' => 'ads',

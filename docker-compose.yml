@@ -39,6 +39,7 @@ services:
       - phpmyadmin:phpserver
       - blog_back:javaserver
       - maccms
+      - mccms
     depends_on:
       - phpmyadmin
   blog_back:
@@ -86,6 +87,16 @@ services:
       - ./docker_movie/resolve/:/var/www/html/resolve/
       - ./docker_movie/addons/:/var/www/html/addons/
       - ./docker_movie/upload/:/var/www/html/upload/
+    links:
+      - db
+      - redis_server
+  mccms:
+    build:
+      context: ./docker_cartoon
+    container_name: mccms_sql
+    restart: always
+    ports:
+      - 8884:80
     links:
       - db
       - redis_server
